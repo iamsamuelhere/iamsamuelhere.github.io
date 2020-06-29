@@ -22,8 +22,8 @@
       <!--navbar-->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <nav class="navbar navbar-expand-lg  p-4" style="background-color: #273c75;">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-4">
+                <nav class="navbar navbar fixed-top navbar-expand-lg  " style="background-color: #273c75;">
                     <a class="navbar-brand" href="#" style="color:white;">
                       <img src="logo.jpg" width="50" height="50">
                       ICMTCI </a>
@@ -62,7 +62,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                               
                               <a class="dropdown-item" href="organise.html" >  <i class="fas fa-users"></i> Organising Committee</a>
-                              <a class="dropdown-item" href="technicalcomm.html" ><i class="fas fa-users-cog"></i> Technical committee</a>
+                              <!-- <a class="dropdown-item" href="technicalcomm.html" ><i class="fas fa-users-cog"></i> Technical committee</a> -->
                               <a class="dropdown-item" href="advisecomm.html" ><i class="fas fa-user-edit"></i>Advisory committee</a>
                             </div>
                           </li>
@@ -91,15 +91,16 @@
     </div>
    
   <!--title-->
+
+  
   <div class="container">
       <div class="row">
-          <div class="col-lg-12 col-md-12 col-xl-12 col-sm-12 col-12">
-              <h3 style="color: white;text-align: center; font-family: 'Montserrat', sans-serif;"
-                class="p-4">
+          <div class="col-lg-12 col-md-12 col-xl-12 col-sm-12 col-12 pt-5 ">
+              <h2 style="color: white;text-align: center; " >
                 International Conference on <br>
               Multidisciplinary Technologies & Challenges in Industry 4.0
                 <br> ICMTCI - 4.0
-              </h3>
+              </h2>
           </div>
       </div>
   </div>
@@ -217,10 +218,16 @@ Technology, Published by Springer Nature, SCOPUS indexed”.
 <div class="container">
     <div class="row" style="background-color: teal; color: white;">
         <button type="button" class="btn btn-primary btn-lg btn-block">
+         <h4>Today :
+           <span id="date" ></span> 
+         </h4>
+         
+          
         <img src="calendar.png">
         <h4>
             Important Dates:
         </h4>
+        
         </button>
     </div>
 </div>
@@ -632,11 +639,9 @@ developmental activities in Engineering, Technology and Management oriented towa
 </div> <br> <br>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 p-3  d-flex justify-content-center" >
-          <img src="ec_logo.jpg" width="200" height="150">
-        </div>
-        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 p-3 d-flex justify-content-center" >
-            <img src="uipathlogo.png" width="200" height="150">
+    
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 p-3 d-flex justify-content-center" >
+            <img src="uipath.png" width="200" height="150">
           </div>
           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 p-3 d-flex justify-content-center" >
             <img src="cisco.png" width="200" height="150">
@@ -648,7 +653,7 @@ developmental activities in Engineering, Technology and Management oriented towa
 
     </div>
     <div class="row">
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 p-3  d-flex justify-content-center" >
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 p-3  d-flex justify-content-center" >
         <img src="arm-university.png" width="200" height="150">
       </div>
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 p-4 d-flex justify-content-center" >
@@ -865,6 +870,15 @@ developmental activities in Engineering, Technology and Management oriented towa
     
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
+    var options ={
+      weekday:'long',
+      year:'numeric',
+      month:'long',
+      day:'numeric'
+  };
+      document.getElementById('date').innerText=new Date().toLocaleDateString('en-US',options);
+
+
 
 
       var overlay = document.getElementById("overlay");
